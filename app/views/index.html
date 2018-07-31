@@ -1,25 +1,66 @@
-{% extends "layout.html" %}
+{% extends "layout.html" %} {% block pageTitle %} GOV.UK Prototype Kit {% endblock %} {% block content %} {{ govukPhaseBanner({
+tag: { text: "alpha" } }) }}
 
-{% block pageTitle %}
-  GOV.UK Prototype Kit
-{% endblock %}
-
-{% block content %}
-
-{{ govukPhaseBanner({
-  tag: {
-    text: "alpha"
-  }
-}) }}
-
-<p class="govuk-body">
-  <a href="#" class="govuk-back-link">Back</a>
-</p>
-
-<p class="govuk-body">
+<p class="govuk-body" style="margin-top:20px;">
   <a href="sign-in" role="button" class="govuk-button govuk-button--start">
     Start now
   </a>
-</p>   
+</p>
+
+<h4 class="govuk-heading-s">Navigation</h4>
+
+<ul class="govuk-list">
+  <li>
+    <a class="govuk-link" href="sign-in">Sign In</a>
+  </li>
+  <li>
+    <a class="govuk-link" href="accounts">Your Accounts</a>
+  </li>
+  <li>
+    <a class="govuk-link" href="accounts/XJBMNV">Nice Employer</a>
+  </li>
+  <li>
+    <a class="govuk-link" href="accounts/XJBMNV/apprentices">Apprentices</a>
+    <ul class="govuk-list govuk-list--bullet">
+      <li>
+        <a class="govuk-link" href="accounts/XJBMNV/apprentices/add">Add an apprentice</a>
+      </li>
+      <li>
+        <a class="govuk-link" href="accounts/XJBMNV/apprentices/cohorts">Your cohorts</a>
+        <ul class="govuk-list govuk-list--bullet">
+          <li>
+            <a class="govuk-link" href="accounts/XJBMNV/apprentices/cohorts/provider">With training provider</a>
+          </li>
+          <li>
+            <a class="govuk-link" href="accounts/XJBMNV/apprentices/cohorts/draft">Drafts</a>
+          </li>
+        </ul>
+
+      </li>
+      <li>
+        <a class="govuk-link" href="accounts/XJBMNV/apprentices/manage">Manage your apprentices</a>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <a class="govuk-link" href="accounts/XJBMNV/finance">Finance</a>
+    <ul class="govuk-list govuk-list--bullet">
+      <li>
+        <a class="govuk-link" href="accounts/XJBMNV/finance/transactions">View transactions</a>
+      </li>
+      <li>
+        <a class="govuk-link" href="accounts/XJBMNV/finance/download-transactions">Download transactions</a>
+      </li>
+      <li>
+        <a class="govuk-link" href="accounts/XJBMNV/finance/transfers">Transfers</a>
+        <ul class="govuk-list govuk-list--bullet">
+          <li>
+            <a class="govuk-link" href="accounts/XJBMNV/finance/transfers/connections/requests">Connect with a receiving employer</a>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
 
 {% endblock %}
